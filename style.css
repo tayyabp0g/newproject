@@ -1560,9 +1560,9 @@ height: 0;
 .features-list .feature-block:nth-child(6) { transition-delay: 1.8s; }
 
 .all-features-section {
-  background: #287bff; /* Bright blue, adjust as needed */
+  background: #287bff;
   color: #fff;
-  padding: 80px 0 60px 0;
+  padding: 80px 170px 60px 170px; /* top, right, bottom, left */
   text-align: center;
   position: relative;
 }
@@ -1593,7 +1593,7 @@ height: 0;
 .features-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 48px 32px;
+  gap: 48px -6px;
   max-width: 1400px;
   margin: 0 auto;
   margin-top: 40px;
@@ -1640,6 +1640,12 @@ height: 0;
     gap: 24px 0;
   }
   .all-features-section {
-    padding: 40px 0 30px 0;
+    padding: 40px 2vw 30px 2vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .all-features-section {
+    padding: 40px 24px 30px 24px;
   }
 }
