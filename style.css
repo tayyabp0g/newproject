@@ -1921,14 +1921,17 @@ height: 0;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 32px 0;
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: 1125px;              /* Width kam kar di */
+  margin: -50px auto;
   border-radius: 12px;
-  padding: 0 40px;
+  padding: 0;                     /* Side padding hata di */
   border-top: 2px solid #2360a8;
   border-bottom: 2px solid #2360a8;
+  border-left: 2px solid #2360a8;   /* Left border add kiya */
+  border-right: 2px solid #2360a8;  /* Right border add kiya */
   position: relative;
   top: -40px;
+  background: transparent;
 }
 
 .client-logos-grid img {
