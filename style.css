@@ -1674,7 +1674,7 @@ height: 0;
 }
 
 .single-stop-content p {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   line-height: 1.2;
   margin-bottom: 32px;
   margin-left: 100px;
@@ -1705,92 +1705,71 @@ height: 0;
 }
 
 .single-stop-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 600px; /* ya jitna aapka monitor image ka max-width hai */
 }
 
-.single-stop-image img {
-  max-width: 390px;
-  width: 100%;
-  border-radius: 18px;
+.monitor-img {
+  width: 70%;
+  display: block;
+  border-radius: 12px;
+  margin-left: auto;   /* Yeh image ko right shift karega */
+  margin-right: 110px;
 }
 
 .floating-img {
   position: absolute;
   z-index: 2;
-  width: 120px;
-  height: auto;
-  /* Animation */
-  animation: floatY 3s ease-in-out infinite alternate;
+  
+  border-radius: 12px;
 }
 
-/* Different positions for each image */
+/* First image: slow up-down animation */
 .floating-img-1 {
-  top: -60px;
-  left: 10px;
-  animation-delay: 0s;
+  width: 75px;
+  top: 54px;
+  left: -18px;
+  animation: floatY1 2.5s ease-in-out infinite alternate;
 }
+
+@keyframes floatY1 {
+  from { transform: translateY(0); }
+  to   { transform: translateY(20px); }
+}
+
+/* Second image: medium speed, less movement */
 .floating-img-2 {
-  top: 40px;
-  left: -80px;
+  width: 47px;
+  top: 125px;
+  left: 7px;
+  animation: floatY2 1.8s ease-in-out infinite alternate;
+  animation-delay: 0.5s;
+}
+
+@keyframes floatY2 {
+  from { transform: translateY(0); }
+  to   { transform: translateY(12px); }
+}
+
+/* Third image: slower, more movement */
+.floating-img-3 {
+  width: 303px;
+  top: 171px;
+  right: 319px;
+  animation: floatY3 3s ease-in-out infinite alternate;
   animation-delay: 1s;
 }
-.floating-img-3 {
-  top: 120px;
-  left: 60px;
-  animation-delay: 2s;
+
+@keyframes floatY3 {
+  from { transform: translateY(0); }
+  to   { transform: translateY(30px); }
 }
 
-/* Animation keyframes for up-down movement */
-@keyframes floatY {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(40px);
-  }
-}
-
-/* Responsive: hide floating images on small screens if needed */
+/* Responsive: mobile par hide karna ho to */
 @media (max-width: 700px) {
-  .floating-img {
-    display: none;
-  }
-}
-@media (max-width: 1000px) {
-  .single-stop-section {
-    flex-direction: column;
-    padding: 40px 10px;
-  }
-  .single-stop-image img {
-    max-width: 100%;
-  }
-}
-
-.small {
-  position: absolute !important;
-  top: 10px;
-  left: 30px;
-  z-index: 10 !important;
-  width: 120px;
-  height: 180px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.small .floating-img {
-  width: 80px;
-  height: auto;
-  margin: 6px 0;
-}
-.small .floating-img-2 {
-  margin: 6px 0;
-  /* margin-left: 0;  // Remove extra margin */
-  /* margin-top: 0;   // Remove extra margin */
-  /* margin-bottom: 0; // Remove extra margin */
+  .floating-img { display: none; }
 }
 
 .single-stop-caption {
