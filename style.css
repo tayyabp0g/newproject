@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nexa:wght@400;700&display=swap');
-
+html, body {
+  overflow-x: hidden !important;
+}
 body {
   margin: 0;
   font-family: 'Nexa', 'Segoe UI', Arial, sans-serif;
@@ -2302,7 +2304,7 @@ form .form-row {
 #preloader {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: #16a1db; /* Screenshot wala blue */
   z-index: 9999;
@@ -2331,4 +2333,316 @@ form .form-row {
   transform: translateY(100vh);
   opacity: 0;
   pointer-events: none;
+}
+
+/* Mobile Responsive Styles */
+
+/* Large tablets and small desktops */
+@media (max-width: 1200px) {
+  .hero-section h1 {
+    font-size: 2.8rem;
+  }
+  .single-stop-content h2 {
+    font-size: 2.2rem;
+  }
+  .contact-container {
+    max-width: 95vw;
+  }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  /* Navigation */
+  .main-navbar {
+    padding: 0 20px;
+  }
+  .navbar-links {
+    display: none;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    padding: 40px 20px;
+  }
+  .hero-section h1 {
+    font-size: 2.4rem;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .hero-laptop-img img {
+    max-width: 90%;
+  }
+  
+  /* Single Stop Section */
+  .single-stop-section {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+  .single-stop-content {
+    text-align: center;
+    max-width: 100%;
+  }
+  .single-stop-buttons {
+    justify-content: center;
+  }
+  .single-stop-caption {
+    text-align: center;
+    margin-left: 0;
+  }
+  
+  /* Contact Section */
+  .contact-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .contact-form {
+    max-width: 100%;
+  }
+  .contact-info {
+    max-width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  
+  /* Login/Signup Pages */
+  .login-page, .signup-page {
+    flex-direction: column;
+  }
+  .login-left, .signup-left {
+    padding: 30px 20px;
+  }
+  .login-right, .signup-right {
+    padding: 30px 20px;
+  }
+  .login-roles {
+    gap: 15px;
+  }
+  .login-role {
+    width: 80px;
+    height: 80px;
+    font-size: 0.8rem;
+  }
+  
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+  }
+  .footer-links {
+    justify-content: center;
+    gap: 40px;
+  }
+  .footer-right {
+    align-items: center;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  /* Navigation */
+  .main-navbar {
+    padding: 0 15px;
+  }
+  .navbar-buttons {
+    gap: 10px;
+  }
+  .signup-btnh, .login-btnh {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    padding: 30px 15px;
+  }
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  .hero-section pre {
+    font-size: 1rem;
+  }
+  .hero-laptop-img img {
+    max-width: 100%;
+  }
+  .hero-phone-img, .hero-folder-img, .hero-checklist-img {
+    display: none;
+  }
+  
+  /* Wavy Section */
+  .wavy-image-section {
+    padding: 40px 15px;
+  }
+  .wavy-content h2 {
+    font-size: 1.8rem;
+  }
+  .wavy-content-features {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Single Stop Section */
+  .single-stop-section {
+    padding: 30px 15px;
+  }
+  .single-stop-content h2 {
+    font-size: 1.8rem;
+  }
+  .single-stop-content p {
+    font-size: 1rem;
+  }
+  
+  /* Why eSkooly Section */
+  .why-eskooly-section {
+    padding: 40px 15px;
+  }
+  .why-eskooly-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  /* Portals Section */
+  .portals-section {
+    padding: 40px 15px;
+  }
+  .portals-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  /* Message System Section */
+  .message-system-section {
+    flex-direction: column;
+    padding: 40px 15px;
+  }
+  .message-system-content-left {
+    text-align: center;
+  }
+  
+  /* SMS Section */
+  .sms-section {
+    flex-direction: column;
+    padding: 40px 15px;
+  }
+  .sms-content {
+    text-align: center;
+  }
+  
+  /* Chat Feature Section */
+  .chat-feature-section {
+    flex-direction: column;
+    padding: 40px 15px;
+  }
+  .mobile-app-content {
+    text-align: center;
+  }
+  
+  /* Live Section */
+  .live {
+    flex-direction: column;
+    padding: 40px 15px;
+  }
+  .live-content {
+    text-align: center;
+  }
+  
+  /* All Features Section */
+  .all-features-section {
+    padding: 40px 15px;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    padding: 40px 15px;
+  }
+  .contact-form h2 {
+    font-size: 1.8rem;
+  }
+  .contact-form p {
+    font-size: 1rem;
+  }
+  
+  /* Login/Signup Pages */
+  .login-left, .signup-left {
+    padding: 20px 15px;
+  }
+  .login-right, .signup-right {
+    padding: 20px 15px;
+  }
+  .login-roles {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .login-role {
+    width: 70px;
+    height: 70px;
+  }
+  .login-form, .signup-form {
+    max-width: 100%;
+  }
+  
+  /* Footer */
+  .footer-container {
+    padding: 0 15px;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer-app-btn img {
+    width: 140px;
+  }
+  
+  /* Client Logos */
+  .client-logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 0;
+    padding: 0 15px;
+  }
+  .client-logos-grid img {
+    max-width: 120px;
+    height: 60px;
+  }
+  
+  /* Floating Images */
+  .floating-images {
+    display: none;
+  }
+  
+  /* Preloader */
+  #preloader {
+    padding: 0 15px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+  .login-role, .signup-role {
+    width: 60px;
+    height: 60px;
+    font-size: 0.7rem;
+  }
+  .login-role i, .signup-role i {
+    font-size: 1.8rem;
+  }
+  .client-logos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-section, .wavy-image-section, .single-stop-section {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  /* ...aur bhi index page ke sections... */
 }

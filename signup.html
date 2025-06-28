@@ -71,6 +71,39 @@
         });
       });
     });
-    </script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const words = ["Institute", "School", "Academy", "Tuition Centre"];
+      let i = 0;
+      let j = 0;
+      let currentWord = "";
+      let isDeleting = false;
+      const typewriter = document.getElementById("typewriter-word");
+
+      function type() {
+        if (!typewriter) return;
+        currentWord = words[i];
+        if (isDeleting) {
+          typewriter.textContent = currentWord.substring(0, j--);
+          if (j < 0) {
+            isDeleting = false;
+            i = (i + 1) % words.length;
+            setTimeout(type, 600);
+          } else {
+            setTimeout(type, 60);
+          }
+        } else {
+          typewriter.textContent = currentWord.substring(0, j++);
+          if (j > currentWord.length) {
+            isDeleting = true;
+            setTimeout(type, 1200);
+          } else {
+            setTimeout(type, 120);
+          }
+        }
+      }
+      type();
+    });
+  </script>
 </body>
 </html>
