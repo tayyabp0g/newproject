@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <div id="preloader">
+    <div class="preloader-dot"></div>
+  </div>
   <nav class="main-navbar">
     <div class="navbar-brand">
       <a href="https://eskooly.com">
@@ -19,7 +22,7 @@
       <a href="#">Help</a>
     </div>
     <div class="navbar-buttons">
-      <button class="signup-btnh">
+      <button class="signup-btnh" onclick="window.location.href='signup.html'">
         <!-- <i class="im im-icon-Add-User"></i> -->
          Sign Up
       </button>
@@ -37,13 +40,14 @@
     eSkooly. It's 100% free for a lifetime with no limitations.
     </pre>
     <div class="hero-buttons">
-      <button class="signup-btn">
-        <!-- <i class="im im-icon-Add-User"></i> -->
-         Sign Up Now, It's Free
+      <button class="signup-btn" onclick="window.location.href='signup.html'">
+        Sign Up Now, It's Free
       </button>
-      <button class="learn-btn">
-        &rarr; Learn More
-      </button>
+      <button class="learn-btn" onclick="scrollToSection()">
+  &rarr; Learn More
+</button>
+
+
     </div>
     <div class="see-how-wrapper">
       <span class="play-icon"></span>
@@ -72,7 +76,7 @@
   <!-- Hero Section End -->
 
   <!-- Wavy Image Section Start -->
-<section class="wavy-image-section">
+<section class="wavy-image-section" id="wavy-image-section">
   <div class="wavy-bg-top">
     <svg class="wavy-svg" viewBox="0 0 1440 320" preserveAspectRatio="none"  xmlns="http://www.w3.org/2000/svg" background: #093079;>
       <path class="shape-fill" d="M0,224L48,197.3C96,171,192,117,288,117.3C384,117,480,171,576,197.3C672,224,768,224,864,197.3C960,171,1056,117,1152,117.3C1248,117,1344,171,1392,197.3L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
@@ -167,8 +171,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <div class="signup-btn-wrapper">
-  <button class="signup-btn-pink">
-    <!-- <i class="fa-regular fa-user-plus"></i> -->
+  <button class="signup-btn-pink" onclick="window.location.href='signup.html'">
     Sign Up Now, It's 100% Free
   </button>
 </div>
@@ -181,7 +184,7 @@
     <p>
       Discuss and share ideas with other users through our messaging system. With this feature, you can do real-time chat with every individual associated with your institution.
     </p>
-    <button class="custom-signup-btn">
+    <button class="custom-signup-btn" onclick="window.location.href='signup.html'">
       <!-- <i class="fa-regular fa-user-plus"></i> -->
       Sign Up Now
     </button>
@@ -223,10 +226,10 @@
     <img src="https://eskooly.com/assets/images/illustrations/mockups/landing3/mobile-chat.png" alt="Mobile App" />
   </div>
   <div class="app-store-buttons">
-    <a href="#" target="_blank">
+    <a href="https://play.google.com/store/apps/details?id=com.eskooly.app" target="_blank">
       <img src="https://eskooly.com/assets/images/illustrations/mockups/landing3/google.png" alt="Get it on Google Play" />
     </a>
-    <a href="#" target="_blank">
+    <a href="https://apps.apple.com/pk/app/eskooly/id6448073356" target="_blank">
       <img src="https://eskooly.com/assets/images/illustrations/mockups/landing3/apple.png" alt="Download on the App Store" />
     </a>
   </div>
@@ -242,7 +245,7 @@
     <p>
       Stop using third-party apps like Zoom, Google meet, or Microsoft team to conduct online classes. Use our most powerful and easy-to-use platform to conduct your live online classes. It's 100% free.
     </p>
-    <button class="live-download-btn">
+    <button class="live-download-btn" onclick="window.location.href='signup.html'">
       Sign up now
     </button>
   </div>
@@ -293,7 +296,7 @@
     <p>
       Our free school management software comes in all languages. Manage your educational institute with your native language. 
     </p>
-    <button class="live-download-btn">
+    <button class="live-download-btn" onclick="window.location.href='signup.html'">
       Sign up now
     </button>
   </div>
@@ -355,7 +358,7 @@
       Well! it's time to put check on these worries. eSkooly presents you a free online school management software to make conventional tasks easier. This is the one-stop solution to manage, track and record everything within your school or organization. Our free online school management software includes admin, staff and students panel, exams module, attendance module, fees collection module, salary and expense management, class tests management, inventory management, students and staff data record system, and many more. It is very easy to use and manage because eskooly is a free online school management software for end-users. If you can send an email you can use eskooly.
     </p>
     <div class="single-stop-buttons">
-      <button class="single-stop-btn">Get started for free</button>
+      <button class="single-stop-btn" onclick="window.location.href='signup.html'">Get started for free</button>
     </div>
     <span class="single-stop-caption">Right now.</span>
   </div>
@@ -508,10 +511,10 @@
     </div>
     <!-- Right: App Buttons & Social -->
     <div class="footer-right">
-      <a href="#" class="footer-app-btn google-play">
+      <a href="https://play.google.com/store/apps/details?id=com.eskooly.app" class="footer-app-btn google-play">
         <img src="https://eskooly.com/assets/images/illustrations/mockups/landing3/google.png" alt="Google Play" />
       </a>
-      <a href="#" class="footer-app-btn app-store">
+      <a href="https://apps.apple.com/pk/app/eskooly/id6448073356" class="footer-app-btn app-store">
         <img src="https://eskooly.com/assets/images/illustrations/mockups/landing3/apple.png" alt="App Store" />
       </a>
       <div class="footer-social">
@@ -523,5 +526,39 @@
     </div>
   </div>
 </footer>
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    // Preloader hide on page load
+    setTimeout(function() {
+      var preloader = document.getElementById('preloader');
+      if(preloader) preloader.classList.add('hide');
+    }, 700);
+  
+    // Home page Sign Up button
+    document.querySelectorAll('.signup-btnh').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        // Prevent default link or button action
+        e.preventDefault();
+        // Show preloader
+        var preloader = document.getElementById('preloader');
+        if(preloader) preloader.classList.remove('hide');
+        // Redirect after short delay
+        setTimeout(function() {
+          window.location.href = 'signup.html';
+        }, 700);
+      });
+    });
+  });
+  </script>
+<script>
+function scrollToSection() {
+  var section = document.getElementById('wavy-image-section');
+  if(section) {
+    section.scrollIntoView({behavior: 'smooth'});
+  } else {
+    console.log('Section not found!');
+  }
+}
+</script>
 </body>
 </html>
