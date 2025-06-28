@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - eSkooly</title>
+  <link rel="stylesheet" href="login.css">
+  <script src="first.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/qod.png">
+</head>
+<body>
+  <div id="preloader">
+    <div class="preloader-dot"></div>
+  </div>
+  <div class="login-page">
+    <!-- Left: Login Form -->
+    <div class="login-left">
+      <img src="https://eskooly.com/bb/asserts/images/logos/eskooly.png" alt="eSkooly Logo" class="login-logo" />
+      <div class="login-no-account">
+        <i class="fa-regular fa-circle-question"></i> I do not have an account yet
+      </div>
+      <div class="login-role-label">I am</div>
+      <div class="login-roles">
+        <div class="login-role active">
+          <i class="fa-solid fa-user"></i>
+          <span>Admin</span>
+        </div>
+        <div class="login-role">
+          <i class="fa-solid fa-user-tie"></i>
+          <span>Employee</span>
+        </div>
+        <div class="login-role">
+          <i class="fa-solid fa-user-graduate"></i>
+          <span>Student</span>
+        </div>
+      </div>
+      <form class="login-form">
+        <div class="input-group">
+          <input type="text" placeholder="User name" required>
+        </div>
+        <div class="input-group">
+          <input type="password" placeholder="Password" required>
+        </div>
+        <div class="login-remember">
+          <input type="checkbox" id="remember">
+          <label for="remember">Remember Me</label>
+        </div>
+        <button type="submit" class="login-btn">Log in</button>
+      </form>
+      <div class="login-forgot">
+        <a href="#">Forgot password ?</a>
+      </div>
+    </div>
+    <!-- Right: Info & Image -->
+    <div class="login-right">
+      <div class="login-right-content">
+        <h2>Start managing now</h2>
+        <p>
+          Stop struggling with common tasks and focus on the real choke points. Discover a full featured & 100% Free School management platform.
+        </p>
+        <button class="get-started-btn" onclick="window.location.href='index.html'">Get started</button>
+        <img src="https://eskooly.com/bb/asserts/images/illustrations/drawings/login4.png" alt="Login Illustration" class="login-illustration" />
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll('.login-role').forEach(function(role) {
+        role.addEventListener('click', function() {
+          document.querySelectorAll('.login-role').forEach(r => r.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    });
+    </script>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+          // Preloader hide on page load
+          setTimeout(function() {
+            var preloader = document.getElementById('preloader');
+            if(preloader) preloader.classList.add('hide');
+          }, 700);
+        
+          // Home page Sign Up button
+          document.querySelectorAll('.signup-btnh').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+              e.preventDefault();
+              var preloader = document.getElementById('preloader');
+              if(preloader) preloader.classList.remove('hide');
+              setTimeout(function() {
+                window.location.href = 'signup.html';
+              }, 700);
+            });
+          });
+        });
+        </script>
+        <script>
+            window.addEventListener('DOMContentLoaded', function() {
+              setTimeout(function() {
+                var preloader = document.getElementById('preloader');
+                if(preloader) preloader.classList.add('hide');
+              }, 700); // 700ms ya jitna chahiye utna delay
+            });
+            </script>
+</body>
+</html>

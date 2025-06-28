@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/qod.png">
+  <title>Sign Up - eSkooly</title>
+  <link rel="stylesheet" href="signup.css">
+  <script src="first.js"></script>
+  <!-- Font Awesome (agar icons chahiye) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div id="preloader">
+    <div class="preloader-dot"></div>
+  </div>
+  <div class="top-right-login">
+    <span>Already have an account ?</span>
+    <a href="login.html" class="login-btn">Login</a>
+  </div>
+  <div class="signup-page">
+    <div class="signup-left">
+      <img src="images/logo.png" alt="eSkooly Logo" class="signup-logo" />
+      <h2>Register your account</h2>
+      <form class="signup-form">
+        <div class="input-group">
+          <input type="email" placeholder="Your Email *" required>
+        </div>
+        <div class="input-group">
+          <input type="password" placeholder="Choose Password *" required>
+        </div>
+        <div class="input-group">
+          <input type="password" placeholder="Confirm Password *" required>
+        </div>
+        <div class="terms-row">
+          <label class="switch">
+            <input type="checkbox" required>
+            <span class="slider"></span>
+          </label>
+          <span class="terms-label">Accept our <a href="#">Terms & Conditions</a></span>
+        </div>
+        <button type="submit" class="signup-submit-btn">Sign up</button>
+      </form>
+    </div>
+    <div class="signup-right">
+      <div class="signup-right-content">
+        <p class="signup-title">Start managing <span class="blue">free</span> now !</p>
+        <p class="signup-desc">
+          eSkooly is a 100% free online <b id="typewriter-word">Institute</b> management software for a lifetime with no limitations.
+        </p>
+        <img src="https://eskooly.com/assets/images/illustrations/mockups/landing3/signup1.png" alt="Signup Illustration" class="signup-illustration" />
+      </div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      // Preloader hide on page load
+      setTimeout(function() {
+        var preloader = document.getElementById('preloader');
+        if(preloader) preloader.classList.add('hide');
+      }, 700);
+    
+      // Home page Sign Up button
+      document.querySelectorAll('.signup-btnh').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          var preloader = document.getElementById('preloader');
+          if(preloader) preloader.classList.remove('hide');
+          setTimeout(function() {
+            window.location.href = 'signup.html';
+          }, 700);
+        });
+      });
+    });
+    </script>
+</body>
+</html>

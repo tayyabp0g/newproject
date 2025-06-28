@@ -1,0 +1,241 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    background: #fff;
+  }
+  
+  .signup-page {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .signup-left {
+    background: linear-gradient(120deg, #0a2a5c 0%, #15396b 100%);
+    color: #fff;
+    flex: 0.95;
+    padding: 48px -10px 36px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .signup-logo {
+    width: 120px;
+    margin-bottom: 2px;
+  }
+  
+  .signup-left h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 9px;
+    text-align: center;
+  }
+  
+  .signup-form {
+    width: 100%;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.1rem;
+    background: #f5f7fa;
+    color: #15396b;
+    margin-bottom: 0;
+  }
+  
+  .terms-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 22px;
+  }
+  .switch input { display: none; }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #e0e0e0;
+    border-radius: 22px;
+    transition: .4s;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px; width: 18px;
+    left: 2px; bottom: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: .4s;
+  }
+  .switch input:checked + .slider {
+    background-color: #298cff;
+  }
+  .switch input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  .terms-label {
+    color: #fff;
+    font-size: 1rem;
+  }
+  .terms-label a { color: #298cff; text-decoration: none; }
+  
+  .signup-submit-btn {
+    background: #0a7cff;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    padding: 14px 0;
+    margin-top: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .signup-submit-btn:hover {
+    background: #15396b;
+  }
+  
+  .have-account {
+    margin-top: 18px;
+    text-align: center;
+    color: #b6d6ff;
+    font-size: 1rem;
+  }
+  .have-account a { color: #fff; text-decoration: underline; }
+  
+  .signup-right {
+    flex: 1.3;
+    background: #fff;
+    color: #222;
+    padding: 36px 36px 36px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .signup-right-content {
+    width: 100%;
+    max-width: 428px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .signup-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .signup-title .blue { color: #298cff; }
+  
+  .signup-desc {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 110px;
+  }
+  
+  .signup-illustration {
+    width: 100%;
+    max-width: 500px;
+    margin: -40px auto;
+    display: block;
+  }
+  
+  @media (max-width: 900px) {
+    .signup-page {
+      flex-direction: column;
+      min-height: 0;
+      width: 98vw;
+    }
+    .signup-left, .signup-right {
+      padding: 32px 16px;
+      min-width: 0;
+      max-width: 100vw;
+    }
+    .signup-right-content {
+      max-width: 100vw;
+    }
+  }
+
+#typewriter-word {
+  font-weight: bold;
+  color: #222;
+  border-right: 2px solid #298cff;
+  padding-right: 2px;
+  white-space: nowrap;
+}
+
+.top-right-login {
+  position: absolute;
+  top: 24px;
+  right: 36px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 100;
+  font-size: 1rem;
+}
+
+.login-btn {
+  background: #1877f2;
+  color: #fff;
+  padding: 6px 22px;
+  border-radius: 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(24,119,242,0.08);
+  transition: background 0.2s;
+}
+
+.login-btn:hover {
+  background: #0a5ed7;
+}
+
+#preloader {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #16a1db;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.7s cubic-bezier(.77,0,.18,1), opacity 0.4s;
+  will-change: transform, opacity;
+}
+.preloader-dot {
+  width: 50px;
+  height: 50px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 50%;
+  animation: preloader-bounce 1.2s infinite alternate;
+}
+@keyframes preloader-bounce {
+  from { transform: translateY(0); opacity: 0.7; }
+  to   { transform: translateY(40px); opacity: 1; }
+}
+#preloader.hide {
+  transform: translateY(100vh);
+  opacity: 0;
+  pointer-events: none;
+}
